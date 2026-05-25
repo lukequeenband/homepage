@@ -5,7 +5,7 @@ import { Music, Calendar, Heart } from 'lucide-react';
 const cards = [
   {
     title: "Live Shows",
-    description: "Experience the energy of our live performances across the country.",
+    description: "Experience the energy of our live performances across the Midwest.",
     icon: Calendar,
     id: "tour"
   },

@@ -5,7 +5,7 @@ import { ExternalLink, Calendar, Facebook, Instagram, Youtube } from 'lucide-rea
 import tourSchedulePic from '../assets/images/TourSchedulePic.jpg';
 
 export default function TourSection() {
-  const calendarSrc = "https://calendar.google.com/calendar/embed?src=OGE5ZGU4NjM0YzRkYmM0ZmJkYjdkYzQyMjI4NmZhMjJjYmYyYTUxODMyZWY1NTE2ZjE1YzhhYzdlMjIwNzJhYkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&ctz=America%2FChicago&mode=AGENDA&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&showTzs=0&color=%231B887A";
+  const calendarSrc = "https://calendar.google.com/calendar/embed?src=OGE5ZGU4NjM0YzRkYmM0ZmJkYjdkYzQyMjI4NmZhMjJjYmYyYTUxODMyZWY1NTE2ZjE1YzhhYzdlMjIwNzJhYkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&ctz=America%2FChicago&mode=AGENDA&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&showTzs=0&color=%2334B49C";
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isDesktop, setIsDesktop] = useState(false);
