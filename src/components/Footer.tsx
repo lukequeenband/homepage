@@ -12,22 +12,24 @@ export default function Footer() {
     setStatus('submitting');
     setErrorMessage('');
     try {
-      const response = await fetch('/api/mailing-list', {
+      const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeWb6b6OwhXcafkBS-KgUtWk0G0nsGpHdzMHGRbNDDDP2l-gA/formResponse";
+      const bodyArgs = new URLSearchParams();
+      bodyArgs.append("emailAddress", email);
+      bodyArgs.append("entry.81527058", name);
+
+      // Using mode: 'no-cors' allows us to send data directly to Google Forms safely from any static host or environment.
+      await fetch(formUrl, {
         method: 'POST',
+        mode: 'no-cors',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify({ name, email }),
+        body: bodyArgs.toString(),
       });
-      if (response.ok) {
-        setStatus('success');
-        setName('');
-        setEmail('');
-      } else {
-        const data = await response.json().catch(() => ({}));
-        setErrorMessage(data.message || 'Something went wrong. Please try again.');
-        setStatus('error');
-      }
+
+      setStatus('success');
+      setName('');
+      setEmail('');
     } catch (err) {
       console.error(err);
       setErrorMessage('Network error. Please try again.');
