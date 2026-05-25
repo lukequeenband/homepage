@@ -34,6 +34,7 @@ export default function Footer() {
       setStatus('error');
     }
   };
+
   const socialLinks = (
     <div className="flex space-x-6">
       <a href="https://www.instagram.com/lukequeenband" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-slate-500 transition-colors"><Instagram /></a>
@@ -57,7 +58,7 @@ export default function Footer() {
   );
 
   const mailingListSection = (
-    <div className="max-w-sm">
+    <div className="max-w-sm w-full">
       <h4 className="text-xl mb-6 uppercase tracking-wider text-white">
         Mailing List
       </h4>
@@ -70,7 +71,7 @@ export default function Footer() {
           <button 
             type="button" 
             onClick={() => setStatus('idle')}
-            className="text-primary hover:text-white text-xs font-semibold underline underline-offset-4 transition-all"
+            className="text-primary hover:text-white text-xs font-semibold underline underline-offset-4 transition-all animate-pulse-subtle"
           >
             Sign up another email
           </button>

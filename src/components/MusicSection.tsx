@@ -17,11 +17,11 @@ export default function MusicSection() {
   const displayedSongs = showAll ? filteredSongs : filteredSongs.slice(0, 4);
 
   return (
-    <section id="songs" className="pt-[60px] md:pt-[69px] lg:pt-[86.4px] pb-20 md:pb-24 bg-slate-950 text-white overflow-hidden relative">
+    <section id="songs" className="pt-[60px] md:pt-[69px] lg:pt-[86.4px] pb-6 md:pb-24 bg-slate-950 text-white overflow-hidden relative">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/10 blur-[120px] -z-0" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-6 lg:gap-16 items-start">
           <div>
             <h2 className="text-5xl md:text-6xl mb-8 uppercase leading-none">Song <br />List</h2>
             <p className="text-xl text-slate-400 mb-10 max-w-md">
