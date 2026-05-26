@@ -6,6 +6,8 @@ import { ChevronLeft, ChevronRight, Facebook, Instagram, Youtube, Linkedin } fro
 import imgA from '../assets/images/01_Luke01_ChesterfieldAmp2025.jpg';
 import imgB from '../assets/images/02_Brett01_ChesterfieldAmp2025.jpg';
 import imgC from '../assets/images/03_ChesterfieldAmp2025.jpg';
+import imgCA from '../assets/images/04a_GrantsFarmBand.jpg';
+import imgCB from '../assets/images/04b_BallwinDays_2024.jpeg';
 import imgD from '../assets/images/04_Luke02_ChesterfieldAmp2025.jpg';
 import imgE from '../assets/images/05_Brett02_ChesterfieldAmp2025.jpg';
 import imgF from '../assets/images/06_Luke03_ChesterfieldAmp2025.jpg';
@@ -17,6 +19,8 @@ const IMAGES = [
   imgA,
   imgB,
   imgC,
+  imgCA,
+  imgCB,
   imgD,
   imgE,
   imgF,
@@ -83,7 +87,17 @@ export default function BioSection() {
                     x: { type: "spring", stiffness: 300, damping: 30 },
                     opacity: { duration: 0.2 }
                   }}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  drag="x"
+                  dragConstraints={{ left: 0, right: 0 }}
+                  dragElastic={0.2}
+                  onDragEnd={(e, info) => {
+                    if (info.offset.x < -50) {
+                      nextSlide();
+                    } else if (info.offset.x > 50) {
+                      prevSlide();
+                    }
+                  }}
+                  className="absolute inset-0 w-full h-full object-cover cursor-grab active:cursor-grabbing touch-pan-y select-none"
                   style={{ objectPosition: IMAGES[currentIndex] === imgG ? '35% center' : 'center' }}
                   alt={`Luke Queen Band ${currentIndex + 1}`}
                 />

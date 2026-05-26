@@ -8,10 +8,18 @@ export default function MusicSection() {
   const [search, setSearch] = useState("");
   const [showAll, setShowAll] = useState(false);
 
+  const normalize = (val: string) => {
+    return val
+      .toLowerCase()
+      .replace(/[’‘`\u00b4]/g, "'");
+  };
+
+  const normalizedSearch = normalize(search);
+
   const filteredSongs = SONG_LIST.filter(
-    song => song.title.toLowerCase().includes(search.toLowerCase()) || 
-            song.artist.toLowerCase().includes(search.toLowerCase()) ||
-            song.genres?.some(g => g.toLowerCase().includes(search.toLowerCase()))
+    song => normalize(song.title).includes(normalizedSearch) || 
+            normalize(song.artist).includes(normalizedSearch) ||
+            song.genres?.some(g => normalize(g).includes(normalizedSearch))
   );
 
   const displayedSongs = showAll ? filteredSongs : filteredSongs.slice(0, 4);

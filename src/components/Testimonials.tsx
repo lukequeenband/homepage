@@ -72,7 +72,19 @@ export default function Testimonials() {
         </div>
 
         <div className="space-y-8 max-w-3xl mx-auto">
-          <div className="relative bg-slate-950/40 border border-slate-800/80 rounded-2xl p-8 md:p-10 shadow-2xl backdrop-blur-sm min-h-[320px] flex flex-col justify-between">
+          <motion.div
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.2}
+            onDragEnd={(e, info) => {
+              if (info.offset.x < -50) {
+                nextReview();
+              } else if (info.offset.x > 50) {
+                prevReview();
+              }
+            }}
+            className="relative bg-slate-950/40 border border-slate-800/80 rounded-2xl p-8 md:p-10 shadow-2xl backdrop-blur-sm min-h-[320px] flex flex-col justify-between cursor-grab active:cursor-grabbing touch-pan-y select-none"
+          >
             
             {/* Quote Mark Decoration */}
             <div className="absolute top-6 right-8 text-slate-800 hover:text-primary/10 transition-colors pointer-events-none">
@@ -132,7 +144,7 @@ export default function Testimonials() {
               </div>
             </div>
 
-          </div>
+          </motion.div>
 
           {/* Pagination dots */}
           <div className="flex justify-center gap-2.5">
