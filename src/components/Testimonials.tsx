@@ -65,9 +65,9 @@ export default function Testimonials() {
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="text-primary font-black uppercase tracking-widest text-sm">Client Experiences</span>
-          <h2 className="text-4xl md:text-6xl uppercase tracking-tight mt-2 font-black leading-none">
-            What Our <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400">Clients Say</span>
+          <h2 className="text-4xl md:text-6xl uppercase tracking-tight mt-2 font-black leading-none text-white">
+            What People <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400">Are Saying</span>
           </h2>
         </div>
 

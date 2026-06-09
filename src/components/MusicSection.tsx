@@ -25,7 +25,7 @@ export default function MusicSection() {
   const displayedSongs = showAll ? filteredSongs : filteredSongs.slice(0, 4);
 
   return (
-    <section id="songs" className="pt-[60px] md:pt-[69px] lg:pt-[86.4px] pb-6 md:pb-24 bg-slate-50 border-t border-slate-200/40 text-slate-900 overflow-hidden relative">
+    <section id="songs" className="pt-[60px] md:pt-[69px] lg:pt-[86.4px] pb-16 md:pb-24 bg-slate-50 border-t border-slate-200/40 text-slate-900 overflow-hidden relative">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 blur-[120px] -z-0" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
