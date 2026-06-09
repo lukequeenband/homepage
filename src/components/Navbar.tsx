@@ -17,10 +17,10 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '#' },
-    { name: 'Music', href: '#music' },
-    { name: 'Tour', href: '#tour' },
+    { name: 'Listen', href: '#music' },
+    { name: 'Shows', href: '#tour' },
+    { name: 'Setlist', href: '#songs' },
     { name: 'Venues', href: '#venues' },
-    { name: 'Songs', href: '#songs' },
     { name: 'Tip Jar', href: '#tip-jar' },
     { name: 'Contact', href: '#contact' },
   ];

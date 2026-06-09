@@ -24,7 +24,7 @@ export default function TourSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-5xl md:text-6xl mb-6 uppercase">Tour Schedule</h2>
+            <h2 className="text-5xl md:text-6xl mb-6 uppercase">LIVE SHOWS</h2>
             <p className="text-xl text-slate-500 font-medium">
               Catch us live at a venue near you.
             </p>

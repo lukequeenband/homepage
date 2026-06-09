@@ -10,8 +10,8 @@ const cards = [
     id: "tour"
   },
   {
-    title: "Song Lists",
-    description: "A wide variety of hits from country to rock and everything in between.",
+    title: "Song List",
+    description: "Search our catalog of crowd-favorite hits from country to rock and more.",
     icon: Music,
     id: "songs"
   },
