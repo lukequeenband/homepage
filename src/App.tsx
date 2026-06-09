@@ -6,6 +6,7 @@ import TourSection from './components/TourSection';
 import MusicSection from './components/MusicSection';
 import VideoSection from './components/VideoSection';
 import TipJar from './components/TipJar';
+import TrustedBy from './components/TrustedBy';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 
@@ -20,6 +21,7 @@ export default function App() {
       <MusicSection />
       <VideoSection />
       <TipJar />
+      <TrustedBy />
       <Testimonials />
       <Footer />
     </div>

@@ -44,7 +44,7 @@ export default function BioSection() {
       nextSlide();
     }, 3500);
     return () => clearInterval(timer);
-  }, [nextSlide]);
+  }, [currentIndex, nextSlide]);
 
   const variants = {
     enter: {
@@ -97,6 +97,7 @@ export default function BioSection() {
                       prevSlide();
                     }
                   }}
+                  draggable={false}
                   className="absolute inset-0 w-full h-full object-cover cursor-grab active:cursor-grabbing touch-pan-y select-none"
                   style={{ objectPosition: IMAGES[currentIndex] === imgG ? '35% center' : 'center' }}
                   alt={`Luke Queen Band ${currentIndex + 1}`}

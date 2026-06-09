@@ -21,6 +21,7 @@ export default function Navbar() {
     { name: 'Songs', href: '#songs' },
     { name: 'Videos', href: '#videos' },
     { name: 'Tip Jar', href: '#tip-jar' },
+    { name: 'Trusted By', href: '#trusted-by' },
     { name: 'Contact', href: '#contact' },
   ];
 
