@@ -449,11 +449,11 @@ export default function TrustedBy() {
                   prevReview();
                 }
               }}
-              className="relative bg-slate-950/40 border border-slate-800/80 rounded-2xl p-8 md:p-10 shadow-2xl backdrop-blur-sm min-h-[320px] flex flex-col justify-between cursor-grab active:cursor-grabbing touch-pan-y select-none"
+              className="relative bg-white border border-slate-200 rounded-2xl p-8 md:p-10 shadow-2xl backdrop-blur-sm min-h-[320px] flex flex-col justify-between cursor-grab active:cursor-grabbing touch-pan-y select-none"
             >
               
               {/* Quote Mark Decoration */}
-              <div className="absolute top-6 right-8 text-slate-800 hover:text-primary/10 transition-colors pointer-events-none">
+              <div className="absolute top-6 right-8 text-slate-100 hover:text-primary/10 transition-colors pointer-events-none">
                 <Quote className="w-16 h-16 transform scale-x-[-1]" />
               </div>
 
@@ -474,7 +474,7 @@ export default function TrustedBy() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -15 }}
                         transition={{ duration: 0.3 }}
-                        className="text-lg md:text-xl text-slate-300 font-medium leading-relaxed italic"
+                        className="text-lg md:text-xl text-black font-medium leading-relaxed italic"
                     >
                       "{REVIEWS[reviewIndex].text}"
                     </motion.p>
@@ -483,11 +483,11 @@ export default function TrustedBy() {
               </div>
 
               {/* Author Info */}
-              <div className="flex items-center justify-between pt-8 border-t border-slate-800/60 mt-6">
+              <div className="flex items-center justify-between pt-8 border-t border-slate-200 mt-6">
                 <div>
-                  <h4 className="font-bold text-lg text-white">{REVIEWS[reviewIndex].author}</h4>
+                  <h4 className="font-bold text-lg text-black">{REVIEWS[reviewIndex].author}</h4>
                   <p className="text-[#34B49C] text-sm font-medium">
-                    {REVIEWS[reviewIndex].role} &middot; <span className="text-slate-400">{REVIEWS[reviewIndex].location}</span>
+                    {REVIEWS[reviewIndex].role} &middot; <span className="text-slate-500">{REVIEWS[reviewIndex].location}</span>
                   </p>
                 </div>
 
@@ -496,14 +496,14 @@ export default function TrustedBy() {
                   <button
                       onClick={prevReview}
                       aria-label="Previous review"
-                      className="p-3 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:bg-slate-800 hover:border-slate-700 transition-all active:scale-95"
+                      className="p-3 rounded-full bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-200 hover:border-slate-300 transition-all active:scale-95 cursor-pointer"
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                   <button
                       onClick={nextReview}
                       aria-label="Next review"
-                      className="p-3 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:bg-slate-800 hover:border-slate-700 transition-all active:scale-95"
+                      className="p-3 rounded-full bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-200 hover:border-slate-300 transition-all active:scale-95 cursor-pointer"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </button>
