@@ -17,11 +17,11 @@ export default function App() {
       <Hero />
       <FeatureCards />
       <BioSection />
-      <TourSection />
-      <MusicSection />
       <VideoSection />
-      <TipJar />
+      <TourSection />
       <TrustedBy />
+      <MusicSection />
+      <TipJar />
       <Testimonials />
       <Footer />
     </div>

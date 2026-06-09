@@ -177,8 +177,18 @@ export const SONG_LIST = [
 ];
 
 export const VIDEOS = [
-  { id: "1", title: "Live Performance", url: "https://www.youtube.com/embed/j6HxftubphU?list=PL3senXUbh3QVfktpYxbipVpPcG3xZE1CK" },
-  { id: "2", title: "Promo Reel", url: "https://www.youtube.com/embed/g3Lynto34lQ?list=PL3senXUbh3QUtqA1zM8w8ckIujJSj87mN" },
+  { 
+    id: "1", 
+    title: "Live Performance", 
+    url: "https://www.youtube.com/embed/videoseries?list=PL3senXUbh3QVfktpYxbipVpPcG3xZE1CK",
+    playlistUrl: "https://www.youtube.com/playlist?list=PL3senXUbh3QVfktpYxbipVpPcG3xZE1CK"
+  },
+  { 
+    id: "2", 
+    title: "Promo Reel", 
+    url: "https://www.youtube.com/embed/videoseries?list=PL3senXUbh3QUtqA1zM8w8ckIujJSj87mN",
+    playlistUrl: "https://www.youtube.com/playlist?list=PL3senXUbh3QUtqA1zM8w8ckIujJSj87mN"
+  },
 ];
 
 export const TIP_LINKS = {
