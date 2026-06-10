@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Headphones, Calendar, Heart, Music, MapPin, Mail, Search } from 'lucide-react';
+import { SONG_LIST } from '../constants';
 
 const cards = [
   {
@@ -60,28 +61,24 @@ export default function FeatureCards() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        whileHover={{ scale: 1.02 }}
+        whileHover={{ scale: 1.015 }}
         transition={{ 
           delay: 0.3,
           type: "spring",
           stiffness: 300,
           damping: 20
         }}
-        className="mt-8 bg-gradient-to-r from-[#34B49C]/10 to-[#34B49C]/20 border border-[#34B49C]/30 hover:border-[#34B49C] rounded-xl py-4.5 px-6 md:py-5 md:px-8 shadow-xl shadow-black/5 hover:shadow-[#34B49C]/10 transition-all hidden md:flex flex-col md:flex-row items-center justify-between gap-6 cursor-pointer"
+        className="mt-8 bg-[#e6f7f3] border-l-[10px] border-[#1da58a] rounded-xl py-3.5 px-6 md:py-4 md:px-8 shadow-sm transition-all hidden md:flex flex-row items-center justify-between gap-6 cursor-pointer group"
       >
-        <div className="flex flex-col md:flex-row items-center gap-5 text-center md:text-left">
-          <div className="bg-[#34B49C] text-white p-3.5 rounded-xl shadow-md shrink-0">
-            <Search className="w-7 h-7" />
-          </div>
-          <div>
-            <h3 className="text-2xl font-black text-slate-900 uppercase tracking-wide">SET LIST</h3>
-            <p className="text-slate-600 font-medium mt-1 leading-relaxed">
-              Search our catalog of crowd-favorite hits from country to rock and more.
-            </p>
-          </div>
+        <div className="flex items-center gap-3.5 md:gap-4 text-left">
+          <Music className="w-6 h-6 text-[#1fa78f] shrink-0" />
+          <span className="text-base md:text-lg lg:text-[19px] font-semibold text-[#0a483c] tracking-tight">
+            Wondering if we play your song?
+          </span>
         </div>
-        <div className="shrink-0 bg-[#34B49C] hover:bg-[#2da18b] text-white font-bold uppercase tracking-wider px-6 py-3 rounded-xl transition-colors shadow-lg shadow-[#34B49C]/20 text-sm">
-          View Songs
+        <div className="shrink-0 flex items-center gap-1 text-[#1fa78f] font-semibold text-sm md:text-base hover:text-[#178e7a] transition-colors">
+          <span>Search our {SONG_LIST?.length || 166}-song set list</span>
+          <span className="text-lg transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </div>
       </motion.a>
 
