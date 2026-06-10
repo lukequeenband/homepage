@@ -71,6 +71,22 @@ export default function TourSection() {
           </div>
           
           <div className="hidden md:flex w-full md:w-[40%] flex-col items-center">
+            {/* Desktop and Tablet Social Media Links centered above the button */}
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <span className="text-slate-400 uppercase font-black tracking-wider text-xs">Follow the band:</span>
+              <div className="flex space-x-6">
+                <a href="https://www.instagram.com/lukequeenband" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-slate-900 hover:scale-110 active:scale-95 transition-all duration-200 transform block">
+                  <Instagram className="w-6 h-6" />
+                </a>
+                <a href="https://www.facebook.com/lukequeenband/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-slate-900 hover:scale-110 active:scale-95 transition-all duration-200 transform block">
+                  <Facebook className="w-6 h-6" />
+                </a>
+                <a href="https://www.youtube.com/@lukequeenband" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-slate-900 hover:scale-110 active:scale-95 transition-all duration-200 transform block">
+                  <Youtube className="w-6 h-6" />
+                </a>
+              </div>
+            </div>
+
             {/* Desktop and Tablet Add to My Calendar button above the picture */}
             <a 
               href="https://calendar.google.com/calendar/u/0/r?cid=OGE5ZGU4NjM0YzRkYmM0ZmJkYjdkYzQyMjI4NmZhMjJjYmYyYTUxODMyZWY1NTE2ZjE1YzhhYzdlMjIwNzJhYkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"

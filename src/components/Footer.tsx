@@ -124,7 +124,7 @@ export default function Footer() {
           {/* Column 1 on Mobile/Tablet, Col 1 & 2 on Desktop */}
           <div className="col-span-1 lg:col-span-2">
             <h2 
-              className="text-4xl mb-8 font-lovelo font-black tracking-tighter text-[#34B49C]"
+              className="text-4xl mb-8 font-lovelo font-black tracking-tighter text-[#34B49C] whitespace-nowrap"
               style={{
                 WebkitTextStroke: '1.5px #34B49C',
                 color: 'transparent'

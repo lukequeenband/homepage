@@ -7,7 +7,7 @@ export default function Hero() {
     <div className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
       {/* Background with Overlay */}
       <div 
-        className="absolute inset-0 z-0 brightness-110 bg-[position:85%_center] md:bg-center bg-cover"
+        className="absolute inset-0 z-0 brightness-110 bg-[position:85%_center] md:bg-[position:85%_center] lg:bg-center bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url("${heroBanner}")`,
         }}

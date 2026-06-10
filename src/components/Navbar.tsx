@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Facebook, Instagram, Youtube, Linkedin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { cn } from '../lib/utils';
 
@@ -36,7 +36,7 @@ export default function Navbar() {
         <a href="#" className="flex items-center space-x-2">
           <span 
             className={cn(
-              "text-3xl font-lovelo font-black tracking-tighter transition-colors duration-500",
+              "text-2xl md:text-[28px] lg:text-4xl font-lovelo font-black tracking-tighter transition-colors duration-500 whitespace-nowrap",
               scrolled ? "text-black" : "text-white"
             )}
             style={{
@@ -49,7 +49,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center md:space-x-3 lg:space-x-8">
           {navLinks.map((link) => {
             const isContact = link.name === 'Contact';
             return (
@@ -58,8 +58,8 @@ export default function Navbar() {
                 href={link.href}
                 className={cn(
                   isContact
-                    ? "bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-md font-bold text-sm hover:text-white hover:scale-105 transition-transform inline-block"
-                    : "text-sm font-semibold hover:text-primary transition-colors",
+                    ? "bg-primary hover:bg-primary/90 text-white md:px-3 md:py-1.5 lg:px-5 lg:py-2.5 rounded-md font-bold md:text-[15px] lg:text-base hover:text-white hover:scale-105 transition-transform inline-block whitespace-nowrap"
+                    : "md:text-[15px] lg:text-base font-semibold hover:text-primary transition-colors whitespace-nowrap",
                   !isContact && (scrolled ? "text-slate-600" : "text-white")
                 )}
               >
@@ -97,6 +97,12 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+          <div className="flex space-x-6 pt-4 border-t border-slate-100 justify-start items-center">
+            <a href="https://www.instagram.com/lukequeenband" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-slate-500 transition-colors" onClick={() => setIsOpen(false)}><Instagram className="w-5 h-5" /></a>
+            <a href="https://www.facebook.com/lukequeenband/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-slate-500 transition-colors" onClick={() => setIsOpen(false)}><Facebook className="w-5 h-5" /></a>
+            <a href="https://www.youtube.com/@lukequeenband" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-slate-500 transition-colors" onClick={() => setIsOpen(false)}><Youtube className="w-5 h-5" /></a>
+            <a href="http://www.linkedin.com/in/luke-queen-band" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-slate-500 transition-colors" onClick={() => setIsOpen(false)}><Linkedin className="w-5 h-5" /></a>
+          </div>
         </motion.div>
       )}
     </nav>
