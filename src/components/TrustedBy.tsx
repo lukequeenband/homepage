@@ -272,8 +272,8 @@ export default function TrustedBy() {
               <div
                 key={cat.id}
                 className={cn(
-                  "rounded-2xl border transition-all duration-300 overflow-hidden bg-slate-950/40 border-slate-800/80 text-white",
-                  isSelected && "border-primary bg-slate-950 shadow-[0_10px_30px_rgba(var(--color-primary),0.15)]"
+                  "rounded-2xl border transition-all duration-300 overflow-hidden bg-slate-900 border-slate-800/80 text-white",
+                  isSelected && "border-primary bg-slate-900 shadow-[0_10px_30px_rgba(var(--color-primary),0.15)]"
                 )}
               >
                 <button
@@ -316,7 +316,7 @@ export default function TrustedBy() {
                       transition={{ duration: 0.25, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="px-5 pb-6 pt-2 border-t border-slate-900/60 bg-slate-950/70">
+                      <div className="px-5 pb-6 pt-2 border-t border-slate-900/60 bg-slate-900">
                         <div className="grid grid-cols-1 gap-2">
                           {cat.items.map((venue, idx) => (
                             <motion.div
@@ -355,8 +355,8 @@ export default function TrustedBy() {
                 className={cn(
                   "flex flex-col items-center justify-center p-4 rounded-xl border transition-all text-center group cursor-pointer relative overflow-hidden",
                   isSelected
-                    ? "bg-slate-950 border-primary text-white scale-105 shadow-[0_10px_25px_rgba(var(--color-primary),0.12)]"
-                    : "bg-slate-950/40 border-slate-800/80 text-slate-400 hover:border-slate-700 hover:text-white"
+                    ? "bg-slate-900 border-primary text-white scale-105 shadow-[0_10px_25px_rgba(var(--color-primary),0.12)]"
+                    : "bg-slate-900 border-slate-800/80 text-slate-400 hover:border-slate-700 hover:text-white"
                 )}
               >
                 {/* Active Indicator Bar */}
@@ -374,7 +374,7 @@ export default function TrustedBy() {
                 <span className="font-semibold text-xs md:text-sm tracking-tight leading-tight mb-1">
                   {cat.id === "festivals" ? "Festivals" : cat.id === "corporate" ? "Miscellaneous" : cat.id === "country-clubs" ? "Country Clubs" : cat.id === "restaurants" ? "Dining" : "Senior Living"}
                 </span>
-                <span className="text-[10px] font-mono text-slate-500 bg-slate-950 px-2 py-0.5 rounded-full">
+                <span className="text-[10px] font-mono text-slate-500 bg-slate-900 px-2 py-0.5 rounded-full">
                   {cat.items.length}
                 </span>
               </button>

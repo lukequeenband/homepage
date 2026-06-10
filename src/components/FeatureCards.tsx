@@ -77,22 +77,58 @@ export default function FeatureCards() {
           </span>
         </div>
         <div className="shrink-0 flex items-center gap-1 text-[#1fa78f] font-semibold text-sm md:text-base hover:text-[#178e7a] transition-colors">
-          <span>Search our {SONG_LIST?.length || 166}-song set list</span>
+          <span>Search our full set list</span>
           <span className="text-lg transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
         </div>
       </motion.a>
 
-      {/* Mobile Only Quick Links Row */}
-      <div className="grid grid-cols-3 gap-4 mt-8 md:hidden w-full max-w-sm mx-auto">
+      <div className="grid grid-cols-3 gap-6 mt-8 md:hidden w-full max-w-sm mx-auto px-4">
         {/* Setlist Link */}
         <motion.a
           href="#songs"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="group aspect-square rounded-full w-full max-w-[90px] mx-auto flex flex-col items-center justify-center bg-[#34B49C] hover:bg-[#2da18b] text-white shadow-lg shadow-[#34B49C]/20 transition-all border border-[#2da18b]/20 text-center"
+          className="flex flex-col items-center justify-center group text-center"
         >
-          <Music className="w-5 h-5 mb-1 text-white transition-transform duration-300 group-hover:scale-125" />
-          <span className="text-[9px] font-black tracking-wider text-white uppercase">SETLIST</span>
+          <div className="relative w-18 h-18 flex items-center justify-center">
+            <svg className="absolute inset-0 w-full h-full text-[#34B49C] fill-none" viewBox="0 0 100 100">
+              {/* Outer sketchy ring */}
+              <circle 
+                cx="50" 
+                cy="50" 
+                r="44" 
+                stroke="currentColor" 
+                strokeWidth="3" 
+                strokeLinecap="round"
+                fill="#0f172a"
+                className="opacity-90"
+              />
+              {/* Inner accent sketchy ring */}
+              <circle 
+                cx="51" 
+                cy="49" 
+                r="40" 
+                stroke="currentColor" 
+                strokeWidth="1.5" 
+                strokeLinecap="round"
+                strokeDasharray="15 6 10 4 20 8"
+                className="opacity-70"
+              />
+              {/* Handdrawn imperfect touch ring */}
+              <path
+                d="M 50,11 A 39,39 0 1,1 49.9,11"
+                stroke="currentColor"
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeDasharray="30 15 10 10"
+                className="opacity-50"
+              />
+            </svg>
+            <div className="relative z-10 flex flex-col items-center justify-center bg-slate-900 group-hover:bg-[#34B49C]/15 rounded-full w-14 h-14 transition-colors">
+              <Music className="w-4 h-4 text-[#34B49C] mb-0.5" />
+              <span className="text-[8px] font-black tracking-widest text-white uppercase leading-none">SETLIST</span>
+            </div>
+          </div>
         </motion.a>
 
         {/* Venues Link */}
@@ -100,10 +136,47 @@ export default function FeatureCards() {
           href="#venues"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="group aspect-square rounded-full w-full max-w-[90px] mx-auto flex flex-col items-center justify-center bg-[#34B49C] hover:bg-[#2da18b] text-white shadow-lg shadow-[#34B49C]/20 transition-all border border-[#2da18b]/20 text-center"
+          className="flex flex-col items-center justify-center group text-center"
         >
-          <MapPin className="w-5 h-5 mb-1 text-white transition-transform duration-300 group-hover:scale-125" />
-          <span className="text-[9px] font-black tracking-wider text-white uppercase">VENUES</span>
+          <div className="relative w-18 h-18 flex items-center justify-center">
+            <svg className="absolute inset-0 w-full h-full text-[#34B49C] fill-none" viewBox="0 0 100 100">
+              {/* Outer sketchy ring */}
+              <circle 
+                cx="50" 
+                cy="50" 
+                r="44" 
+                stroke="currentColor" 
+                strokeWidth="3" 
+                strokeLinecap="round"
+                fill="#0f172a"
+                className="opacity-90"
+              />
+              {/* Inner accent sketchy ring */}
+              <circle 
+                cx="51" 
+                cy="49" 
+                r="40" 
+                stroke="currentColor" 
+                strokeWidth="1.5" 
+                strokeLinecap="round"
+                strokeDasharray="15 6 10 4 20 8"
+                className="opacity-70"
+              />
+              {/* Handdrawn imperfect touch ring */}
+              <path
+                d="M 50,11 A 39,39 0 1,1 49.9,11"
+                stroke="currentColor"
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeDasharray="30 15 10 10"
+                className="opacity-50"
+              />
+            </svg>
+            <div className="relative z-10 flex flex-col items-center justify-center bg-slate-900 group-hover:bg-[#34B49C]/15 rounded-full w-14 h-14 transition-colors">
+              <MapPin className="w-4 h-4 text-[#34B49C] mb-0.5" />
+              <span className="text-[8px] font-black tracking-widest text-white uppercase leading-none">VENUES</span>
+            </div>
+          </div>
         </motion.a>
 
         {/* Contact Link */}
@@ -111,10 +184,47 @@ export default function FeatureCards() {
           href="#contact"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="group aspect-square rounded-full w-full max-w-[90px] mx-auto flex flex-col items-center justify-center bg-[#34B49C] hover:bg-[#2da18b] text-white shadow-lg shadow-[#34B49C]/20 transition-all border border-[#2da18b]/20 text-center"
+          className="flex flex-col items-center justify-center group text-center"
         >
-          <Mail className="w-5 h-5 mb-1 text-white transition-transform duration-300 group-hover:scale-125" />
-          <span className="text-[9px] font-black tracking-wider text-white uppercase">CONTACT</span>
+          <div className="relative w-18 h-18 flex items-center justify-center">
+            <svg className="absolute inset-0 w-full h-full text-[#34B49C] fill-none" viewBox="0 0 100 100">
+              {/* Outer sketchy ring */}
+              <circle 
+                cx="50" 
+                cy="50" 
+                r="44" 
+                stroke="currentColor" 
+                strokeWidth="3" 
+                strokeLinecap="round"
+                fill="#0f172a"
+                className="opacity-90"
+              />
+              {/* Inner accent sketchy ring */}
+              <circle 
+                cx="51" 
+                cy="49" 
+                r="40" 
+                stroke="currentColor" 
+                strokeWidth="1.5" 
+                strokeLinecap="round"
+                strokeDasharray="15 6 10 4 20 8"
+                className="opacity-70"
+              />
+              {/* Handdrawn imperfect touch ring */}
+              <path
+                d="M 50,11 A 39,39 0 1,1 49.9,11"
+                stroke="currentColor"
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeDasharray="30 15 10 10"
+                className="opacity-50"
+              />
+            </svg>
+            <div className="relative z-10 flex flex-col items-center justify-center bg-slate-900 group-hover:bg-[#34B49C]/15 rounded-full w-14 h-14 transition-colors">
+              <Mail className="w-4 h-4 text-[#34B49C] mb-0.5" />
+              <span className="text-[8px] font-black tracking-widest text-white uppercase leading-none">CONTACT</span>
+            </div>
+          </div>
         </motion.a>
       </div>
     </div>
