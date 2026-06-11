@@ -82,15 +82,24 @@ export default function FeatureCards() {
         </div>
       </motion.a>
 
-      <div className="grid grid-cols-3 gap-6 mt-8 md:hidden w-full max-w-sm mx-auto px-4">
+      <div className="grid grid-cols-3 gap-5 mt-8 md:hidden w-full max-w-sm mx-auto px-4">
         {/* Setlist Link */}
         <motion.a
           href="#songs"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{
+            type: "spring",
+            stiffness: 150,
+            damping: 15,
+            delay: 0
+          }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="flex flex-col items-center justify-center group text-center"
         >
-          <div className="relative w-18 h-18 flex items-center justify-center">
+          <div className="relative w-20 h-20 flex items-center justify-center">
             <svg className="absolute inset-0 w-full h-full text-[#34B49C] fill-none" viewBox="0 0 100 100">
               {/* Outer sketchy ring */}
               <circle 
@@ -98,7 +107,7 @@ export default function FeatureCards() {
                 cy="50" 
                 r="44" 
                 stroke="currentColor" 
-                strokeWidth="3" 
+                strokeWidth="3.5" 
                 strokeLinecap="round"
                 fill="#0f172a"
                 className="opacity-90"
@@ -124,9 +133,9 @@ export default function FeatureCards() {
                 className="opacity-50"
               />
             </svg>
-            <div className="relative z-10 flex flex-col items-center justify-center bg-slate-900 group-hover:bg-[#34B49C]/15 rounded-full w-14 h-14 transition-colors">
-              <Music className="w-4 h-4 text-[#34B49C] mb-0.5" />
-              <span className="text-[8px] font-black tracking-widest text-white uppercase leading-none">SETLIST</span>
+            <div className="relative z-10 flex flex-col items-center justify-center bg-slate-900 group-hover:bg-[#34B49C]/15 rounded-full w-16 h-16 transition-colors shadow-sm">
+              <Music className="w-5 h-5 text-[#34B49C] -mt-0.5 mb-1.5" />
+              <span className="text-[9px] font-black tracking-widest text-white uppercase leading-none">SETLIST</span>
             </div>
           </div>
         </motion.a>
@@ -134,11 +143,20 @@ export default function FeatureCards() {
         {/* Venues Link */}
         <motion.a
           href="#venues"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{
+            type: "spring",
+            stiffness: 150,
+            damping: 15,
+            delay: 0.08
+          }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="flex flex-col items-center justify-center group text-center"
         >
-          <div className="relative w-18 h-18 flex items-center justify-center">
+          <div className="relative w-20 h-20 flex items-center justify-center">
             <svg className="absolute inset-0 w-full h-full text-[#34B49C] fill-none" viewBox="0 0 100 100">
               {/* Outer sketchy ring */}
               <circle 
@@ -146,7 +164,7 @@ export default function FeatureCards() {
                 cy="50" 
                 r="44" 
                 stroke="currentColor" 
-                strokeWidth="3" 
+                strokeWidth="3.5" 
                 strokeLinecap="round"
                 fill="#0f172a"
                 className="opacity-90"
@@ -172,9 +190,9 @@ export default function FeatureCards() {
                 className="opacity-50"
               />
             </svg>
-            <div className="relative z-10 flex flex-col items-center justify-center bg-slate-900 group-hover:bg-[#34B49C]/15 rounded-full w-14 h-14 transition-colors">
-              <MapPin className="w-4 h-4 text-[#34B49C] mb-0.5" />
-              <span className="text-[8px] font-black tracking-widest text-white uppercase leading-none">VENUES</span>
+            <div className="relative z-10 flex flex-col items-center justify-center bg-slate-900 group-hover:bg-[#34B49C]/15 rounded-full w-16 h-16 transition-colors shadow-sm">
+              <MapPin className="w-5 h-5 text-[#34B49C] -mt-0.5 mb-1.5" />
+              <span className="text-[9px] font-black tracking-widest text-white uppercase leading-none">VENUES</span>
             </div>
           </div>
         </motion.a>
@@ -182,11 +200,20 @@ export default function FeatureCards() {
         {/* Contact Link */}
         <motion.a
           href="#contact"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{
+            type: "spring",
+            stiffness: 150,
+            damping: 15,
+            delay: 0.16
+          }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="flex flex-col items-center justify-center group text-center"
         >
-          <div className="relative w-18 h-18 flex items-center justify-center">
+          <div className="relative w-20 h-20 flex items-center justify-center">
             <svg className="absolute inset-0 w-full h-full text-[#34B49C] fill-none" viewBox="0 0 100 100">
               {/* Outer sketchy ring */}
               <circle 
@@ -194,7 +221,7 @@ export default function FeatureCards() {
                 cy="50" 
                 r="44" 
                 stroke="currentColor" 
-                strokeWidth="3" 
+                strokeWidth="3.5" 
                 strokeLinecap="round"
                 fill="#0f172a"
                 className="opacity-90"
@@ -220,9 +247,9 @@ export default function FeatureCards() {
                 className="opacity-50"
               />
             </svg>
-            <div className="relative z-10 flex flex-col items-center justify-center bg-slate-900 group-hover:bg-[#34B49C]/15 rounded-full w-14 h-14 transition-colors">
-              <Mail className="w-4 h-4 text-[#34B49C] mb-0.5" />
-              <span className="text-[8px] font-black tracking-widest text-white uppercase leading-none">CONTACT</span>
+            <div className="relative z-10 flex flex-col items-center justify-center bg-slate-900 group-hover:bg-[#34B49C]/15 rounded-full w-16 h-16 transition-colors shadow-sm">
+              <Mail className="w-5 h-5 text-[#34B49C] -mt-0.5 mb-1.5" />
+              <span className="text-[9px] font-black tracking-widest text-white uppercase leading-none">CONTACT</span>
             </div>
           </div>
         </motion.a>

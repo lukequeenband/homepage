@@ -24,3 +24,30 @@
   }
 }
 
+/* Clockwise white glow border trace animation rules */
+@keyframes border-trace {
+  0% {
+    stroke-dashoffset: 100;
+    opacity: 0;
+  }
+  4% {
+    opacity: 1;
+  }
+  36% {
+    opacity: 1;
+  }
+  40% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+.animate-border-trace {
+  animation: border-trace 3s linear infinite;
+}
+
+

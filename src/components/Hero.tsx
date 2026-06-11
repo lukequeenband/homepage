@@ -1,8 +1,39 @@
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import heroBanner from '../assets/images/small banner.png';
 
 export default function Hero() {
+  const [animationKey, setAnimationKey] = useState(0);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      // Trigger a reset of the trace animation if the user scrolls back to the very top
+      if (currentScrollY <= 5 && lastScrollY > 5) {
+        setAnimationKey(prev => prev + 1);
+      }
+      lastScrollY = currentScrollY;
+    };
+
+    const handleHashChange = () => {
+      // Trigger a reset if the hash goes back to empty/home
+      if (window.location.hash === "" || window.location.hash === "#" || window.location.hash === "#home") {
+        setAnimationKey(prev => prev + 1);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('hashchange', handleHashChange);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
   return (
     <div className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
       {/* Background with Overlay */}
@@ -41,9 +72,52 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-wrap gap-4"
           >
-            <a href="mailto:info@LukeQueenBand.com" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-md font-bold text-lg flex items-center group hover:scale-105 transition-transform">
-              BOOK NOW
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <a 
+              href="mailto:info@LukeQueenBand.com" 
+              className="relative overflow-hidden bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-md font-bold text-lg flex items-center group hover:scale-105 transition-transform"
+            >
+              {/* Perimeter border trace glow svg */}
+              <svg 
+                key={animationKey}
+                className="absolute inset-0 w-full h-full pointer-events-none"
+                style={{ zIndex: 10 }}
+              >
+                {/* Glow layer */}
+                <rect
+                  x="1.5"
+                  y="1.5"
+                  style={{ width: 'calc(100% - 3px)', height: 'calc(100% - 3px)' }}
+                  rx="6"
+                  ry="6"
+                  fill="none"
+                  stroke="rgba(255, 255, 255, 0.45)"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeDasharray="25 75"
+                  pathLength="100"
+                  className="animate-border-trace"
+                />
+                {/* Sharp core layer */}
+                <rect
+                  x="1.5"
+                  y="1.5"
+                  style={{ width: 'calc(100% - 3px)', height: 'calc(100% - 3px)' }}
+                  rx="6"
+                  ry="6"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeDasharray="25 75"
+                  pathLength="100"
+                  className="animate-border-trace"
+                />
+              </svg>
+
+              <span className="relative z-10 flex items-center">
+                BOOK NOW
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </span>
             </a>
           </motion.div>
         </div>
